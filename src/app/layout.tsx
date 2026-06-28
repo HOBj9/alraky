@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import { Cairo } from "next/font/google";
-import { getLocale } from "next-intl/server";
 import "./globals.css";
 
 const cairo = Cairo({
@@ -9,14 +8,11 @@ const cairo = Cairo({
   display: "swap",
 });
 
-export default async function RootLayout({ children }: { children: ReactNode }) {
-  const locale = await getLocale();
-  const dir = locale === "ar" ? "rtl" : "ltr";
-
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
-      lang={locale}
-      dir={dir}
+      lang="ar"
+      dir="rtl"
       className={`${cairo.variable} h-full antialiased`}
       data-scroll-behavior="smooth"
       suppressHydrationWarning

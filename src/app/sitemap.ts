@@ -5,6 +5,8 @@ import { products } from "@/lib/content/products";
 import { blogPosts } from "@/lib/content/blog";
 import { blogCategories } from "@/lib/content/blog";
 
+export const dynamic = "force-static";
+
 const staticPages = [
   "",
   "/about",
