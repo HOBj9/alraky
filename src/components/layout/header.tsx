@@ -89,7 +89,7 @@ export function Header() {
   }, [mobileMenuOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-[110] border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="relative flex shrink-0 items-center gap-2" aria-label="Al RAKY Home">
           <Image
@@ -147,7 +147,7 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={motionTransitionFast}
-            className="fixed inset-0 top-16 z-40 bg-background/95 backdrop-blur-xl lg:hidden"
+            className="fixed inset-0 top-16 z-[100] min-h-[calc(100dvh-4rem)] border-t border-border bg-background shadow-lg shadow-black/10 lg:hidden"
             aria-hidden={false}
           >
             <LayoutGroup id="mobile-nav">
